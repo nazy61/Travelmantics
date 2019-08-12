@@ -1,5 +1,6 @@
 package com.nazycodes.travelmantics;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
@@ -29,8 +30,8 @@ public class DealAdapter extends RecyclerView.Adapter<DealAdapter.DealViewHolder
     private DatabaseReference mDatabaseReference;
     private ChildEventListener mChildListener;
 
-    public DealAdapter(){
-        FirebaseUtil.openFbReference("traveldeals");
+    public DealAdapter(Activity activity){
+        //FirebaseUtil.openFbReference("traveldeals", activity);
         mFirebaseDatabase = FirebaseUtil.mFirebaseDatabase;
         mDatabaseReference = FirebaseUtil.mDatabaseReference;
         deals = FirebaseUtil.mDeals;
