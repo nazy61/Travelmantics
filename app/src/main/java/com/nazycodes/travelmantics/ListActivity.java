@@ -56,6 +56,7 @@ public class ListActivity extends AppCompatActivity {
                             }
                         });
                 FirebaseUtil.detachListener();
+                finish();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -86,4 +87,5 @@ public class ListActivity extends AppCompatActivity {
     public void showMenu(){
         invalidateOptionsMenu();
     }
+
 }
