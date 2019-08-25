@@ -65,6 +65,7 @@ public class FirebaseUtil {
     private static void signIn() {
         // Choose authentication providers
         List<AuthUI.IdpConfig> providers = Arrays.asList(
+                new AuthUI.IdpConfig.PhoneBuilder().build(),
                 new AuthUI.IdpConfig.EmailBuilder().build(),
                 new AuthUI.IdpConfig.GoogleBuilder().build());
 
