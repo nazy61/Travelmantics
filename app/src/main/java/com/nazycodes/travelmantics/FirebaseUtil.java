@@ -53,6 +53,7 @@ public class FirebaseUtil {
                         String userID = firebaseAuth.getUid();
                         checkAdmin(userID);
                         Toast.makeText(callerActivity.getBaseContext(), "Welcome back", Toast.LENGTH_LONG).show();
+                        return;
                     }
                 }
             };
